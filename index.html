@@ -24,6 +24,8 @@
             margin: 20px auto;
             box-sizing: border-box;
             backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
         }
         h2 {
             color: #9b59b6;
@@ -63,6 +65,8 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            position: relative;
+            z-index: 1;
         }
         .cta:hover {
             background: linear-gradient(to right, #d35400, #c0392b);
@@ -77,6 +81,17 @@
             background: rgba(0, 0, 0, 0.2);
             padding: 10px;
             border-radius: 8px;
+            text-align: left;
+            position: relative;
+            padding-left: 40px;
+        }
+        .testimonial:before {
+            content: """;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            font-size: 30px;
+            color: rgba(255,255,255,0.1);
         }
         .emoji {
             font-size: clamp(1rem, 4vw, 1.5rem);
@@ -90,6 +105,60 @@
             background: rgba(0, 0, 0, 0.2);
             padding: 2px 8px;
             border-radius: 4px;
+        }
+        .notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .live-notification {
+            background: rgba(231, 76, 60, 0.2);
+            padding: 8px;
+            border-radius: 20px;
+            margin: 10px 0;
+            font-size: 0.8rem;
+            color: #ff7979;
+            border: 1px solid #e74c3c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .live-notification:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #e74c3c;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        .testimonial-author {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 5px;
         }
         
         /* Mobile-specific adjustments */
@@ -114,7 +183,14 @@
 </head>
 <body>
     <div class="survey-earning">
+        <div class="notification">3</div>
+        
         <h2>💰 Earn Money Taking Simple Surveys! 💰</h2>
+        
+        <div class="live-notification">
+            LIVE: 5 people signed up in the last 10 minutes
+        </div>
+        
         <p>Get paid for sharing your opinions! Complete simple surveys in your spare time and earn between <span class="highlight daily">Kshs 500 to Kshs 3,000 DAILY</span> from the comfort of your home!</p>
         
         <div class="benefits">
@@ -124,9 +200,28 @@
         
         <p>With consistent participation, you can accumulate earnings of <span class="highlight monthly">Kshs 15,000 to Kshs 90,000 MONTHLY</span>!</p>
         
-        <p class="testimonial">"I earned Kshs 28,500 in my first month just by spending 1-2 hours daily!" - Jane, Nairobi</p>
+        <div class="testimonials">
+            <div class="testimonial">
+                "I couldn't believe how easy it was! Made Kshs 32,000 in my first month just doing surveys during my commute."
+                <span class="testimonial-author">- Michael, Mombasa</span>
+            </div>
+            
+            <div class="testimonial">
+                "This paid for my kids' school fees. I earn about Kshs 2,500 daily while watching TV in the evenings."
+                <span class="testimonial-author">- Susan, Nakuru</span>
+            </div>
+            
+            <div class="testimonial">
+                "Better than any side hustle I've tried. Withdrawals hit my M-Pesa instantly. 5 stars!"
+                <span class="testimonial-author">- David, Kisumu</span>
+            </div>
+        </div>
         
-        <a href="#" class="cta">START EARNING TODAY →</a>
+        <div class="live-notification">
+            LIMITED SPOTS AVAILABLE: 3 remaining in Nairobi area
+        </div>
+        
+        <a href="#" class="cta">CLAIM YOUR SPOT NOW →</a>
     </div>
 </body>
 </html>
