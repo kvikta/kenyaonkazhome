@@ -8,175 +8,192 @@
     <title>Earn Ksh 500-3,000 Daily | Paid Surveys Kenya | SurveyEarn</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             min-height: 100vh;
+            color: #f8f9fa;
         }
         .survey-earning {
-            background: rgba(30, 30, 46, 0.85);
-            border-radius: 15px;
-            padding: 20px;
-            color: #f0f0f0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 2px solid #4a90e2;
+            background: rgba(33, 37, 41, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            color: #f8f9fa;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             text-align: center;
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 700px;
+            margin: 30px auto;
             box-sizing: border-box;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
             position: relative;
             overflow: hidden;
         }
-        h2 {
-            color: #9b59b6;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            margin-top: 0;
-            background: linear-gradient(to right, #9b59b6, #3498db);
+        h1 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin: 0 0 20px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #6ea8fe;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            position: relative;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+        h3 {
+            color: #adb5bd;
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
         }
         .highlight {
             font-weight: bold;
             color: #ff6b6b;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         .daily {
-            color: #2ecc71;
-            font-size: clamp(1rem, 3vw, 1.2em);
+            color: #51cf66;
             font-weight: bold;
         }
         .monthly {
-            color: #3498db;
-            font-size: clamp(1.1rem, 3.5vw, 1.3em);
+            color: #4dabf7;
             font-weight: bold;
         }
         .cta {
-            background: linear-gradient(to right, #e67e22, #e74c3c);
+            background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
             color: white;
-            padding: 12px 25px;
+            padding: 15px 30px;
             border-radius: 50px;
             display: inline-block;
-            margin-top: 15px;
+            margin: 20px 0;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+            box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-            position: relative;
-            z-index: 1;
         }
         .cta:hover {
-            background: linear-gradient(to right, #d35400, #c0392b);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(229, 46, 113, 0.6);
         }
-        .testimonial {
-            font-style: italic;
-            color: #bdc3c7;
-            font-size: clamp(0.8rem, 2.5vw, 1rem);
-            margin: 15px 0;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border-radius: 8px;
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: 45%;
+            min-width: 200px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .how-it-works {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .step {
+            background: rgba(108, 117, 125, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .step:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff8a00, #e52e71);
+        }
+        .features {
             text-align: left;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 0;
+            list-style-type: none;
+        }
+        .features li {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
             position: relative;
             padding-left: 40px;
         }
-        .testimonial:before {
-            content: """;
+        .features li:before {
+            content: "✓";
+            color: #51cf66;
             position: absolute;
-            left: 10px;
-            top: 5px;
-            font-size: 30px;
-            color: rgba(255,255,255,0.1);
-        }
-        .emoji {
-            font-size: clamp(1rem, 4vw, 1.5rem);
-        }
-        .benefits {
-            margin: 15px 0;
-            line-height: 1.6;
-            font-size: clamp(0.9rem, 3vw, 1rem);
-        }
-        .benefits span {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        .notification {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #e74c3c;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .live-notification {
-            background: rgba(231, 76, 60, 0.2);
-            padding: 8px;
-            border-radius: 20px;
-            margin: 10px 0;
-            font-size: 0.8rem;
-            color: #ff7979;
-            border: 1px solid #e74c3c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .live-notification:before {
-            content: "";
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #e74c3c;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: blink 1.5s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
-        .testimonial-author {
-            display: block;
-            text-align: right;
+            left: 15px;
             font-weight: bold;
-            color: #3498db;
-            margin-top: 5px;
+        }
+        .earnings-calculator {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .calculator {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+            accent-color: #e52e71;
+        }
+        .result {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(77, 171, 247, 0.2);
+            border-radius: 10px;
         }
         .play-store-btn {
             display: inline-flex;
             align-items: center;
-            background: #000;
+            background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
             color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
+            padding: 12px 20px;
+            border-radius: 10px;
             text-decoration: none;
             margin: 15px 5px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .play-store-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         .play-store-btn img {
             width: 30px;
@@ -188,108 +205,208 @@
         }
         .play-store-btn .small {
             font-size: 0.7rem;
-            color: #aaa;
+            color: rgba(255, 255, 255, 0.8);
         }
         .play-store-btn .large {
             font-size: 1.1rem;
             font-weight: bold;
         }
-        .download-section {
-            background: rgba(0,0,0,0.3);
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 300px;
+            position: relative;
+            text-align: left;
+        }
+        .testimonial:before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+        }
+        .testimonial-author {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+            color: #6ea8fe;
+            margin-top: 15px;
+            font-style: normal;
+        }
+        .faq {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .question {
+            background: rgba(255, 255, 255, 0.05);
             padding: 15px;
+            margin-bottom: 15px;
             border-radius: 10px;
-            margin: 20px 0;
+            border-left: 3px solid #e52e71;
         }
-        .download-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #f1c40f;
+        .small-print {
+            font-size: 0.8rem;
+            color: #adb5bd;
+            margin-top: 10px;
         }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        nav a {
+            color: #6ea8fe;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Popup Notifications */
         .popup-notification {
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            background: #e74c3c;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: rgba(233, 30, 99, 0.95);
             color: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             z-index: 1000;
             opacity: 0;
-            transition: all 0.4s ease;
-            max-width: 90%;
-            width: 350px;
+            transition: all 0.3s ease;
+            max-width: 280px;
             text-align: center;
             pointer-events: none;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .popup-notification.show {
             transform: translate(-50%, -50%) scale(1);
             opacity: 1;
             pointer-events: auto;
         }
-        .popup-notification:before {
-            content: "🔥";
-            display: block;
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
         .popup-notification .popup-content {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
         .popup-notification .popup-link {
             display: inline-block;
             background: white;
-            color: #e74c3c;
-            padding: 8px 15px;
-            border-radius: 50px;
+            color: #e52e71;
+            padding: 6px 12px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            transition: all 0.2s ease;
         }
         .popup-notification .popup-link:hover {
-            background: #f8f8f8;
+            background: #f8f9fa;
             transform: scale(1.05);
         }
         .popup-notification .popup-close {
             position: absolute;
-            top: 10px;
-            right: 15px;
+            top: 5px;
+            right: 8px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        .popup-notification .popup-close:hover {
+            opacity: 1;
         }
         
-        /* Mobile-specific adjustments */
-        @media (max-width: 480px) {
+        /* Live Notification */
+        .live-notification {
+            background: rgba(233, 30, 99, 0.2);
+            padding: 10px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #ffb8d9;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(233, 30, 99, 0.3);
+        }
+        .live-notification:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff4d8d;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        /* Notification Badge */
+        .notification {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff4d8d;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
             .survey-earning {
-                padding: 15px;
-                border-width: 2px;
-                margin: 10px;
+                padding: 20px;
+                margin: 20px 10px;
+                border-radius: 15px;
             }
-            .cta {
-                padding: 12px 20px;
-                width: 90%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+            h1 {
+                font-size: 1.8rem;
             }
-            body {
-                padding: 10px;
+            h2 {
+                font-size: 1.5rem;
             }
-            .play-store-btn {
-                padding: 8px 12px;
+            .benefit-card {
+                width: 100%;
             }
-            .play-store-btn img {
-                width: 25px;
-                height: 25px;
+            .step {
+                width: 100%;
+                max-width: none;
             }
             .popup-notification {
-                width: 85%;
-                padding: 15px;
+                max-width: 85%;
             }
         }
     </style>
@@ -298,51 +415,64 @@
     <div class="survey-earning">
         <div class="notification">5</div>
         
-        <h1>Earn Money Taking Online Surveys in Kenya</h1>
+        <h1>Earn Ksh 500-3,000 Daily Taking Surveys</h1>
         
         <div class="live-notification">
             LIVE: 8 people signed up in the last 15 minutes
         </div>
         
-        <p>Welcome to SurveyEarn, Kenya's most trusted paid survey platform. We connect Kenyan consumers with leading brands who value your opinions. Get paid between <span class="highlight daily">Kshs 500 to Kshs 3,000 DAILY</span> simply by sharing your thoughts on products and services.</p>
+        <p>Join thousands of Kenyans earning extra income by sharing your opinions with top brands. Our members typically earn between <span class="highlight daily">Kshs 500 to Kshs 3,000 DAILY</span> from the comfort of their homes.</p>
         
         <div class="benefits">
-            <span class="emoji">✨</span> <span style="color: #f1c40f;">No special skills required</span> <span class="emoji">✨</span><br>
-            <span class="emoji">💻</span> <span style="color: #1abc9c;">Work anytime from your phone or computer</span> <span class="emoji">💻</span>
+            <div class="benefit-card">
+                <h3>💰 Instant Payments</h3>
+                <p>Withdraw your earnings to M-Pesa anytime with no minimum threshold</p>
+            </div>
+            <div class="benefit-card">
+                <h3>⏱ Flexible Schedule</h3>
+                <p>Complete surveys whenever you have spare time - day or night</p>
+            </div>
+            <div class="benefit-card">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Earn money directly from your smartphone anywhere in Kenya</p>
+            </div>
+            <div class="benefit-card">
+                <h3>🎁 Bonus Rewards</h3>
+                <p>Earn extra through our referral program and survey streaks</p>
+            </div>
         </div>
         
-        <h2>How It Works</h2>
+        <h2>How SurveyEarn Works</h2>
         <div class="how-it-works">
             <div class="step">
-                <h3>1. Sign Up</h3>
+                <h3>1. Quick Sign Up</h3>
                 <p>Create your free account in under 2 minutes. No payment required.</p>
             </div>
             <div class="step">
-                <h3>2. Complete Profile</h3>
-                <p>Help us match you with relevant surveys by completing your demographic profile.</p>
+                <h3>2. Profile Completion</h3>
+                <p>Help us match you with relevant surveys by completing your profile.</p>
             </div>
             <div class="step">
-                <h3>3. Take Surveys</h3>
-                <p>Earn Ksh 50-500 per survey. Most take 5-15 minutes to complete.</p>
+                <h3>3. Survey Invitations</h3>
+                <p>Receive survey invitations via email or app notifications.</p>
             </div>
             <div class="step">
-                <h3>4. Get Paid</h3>
-                <p>Redeem your earnings via M-Pesa, bank transfer, or airtime.</p>
+                <h3>4. Earn & Withdraw</h3>
+                <p>Cash out your earnings instantly via M-Pesa anytime.</p>
             </div>
         </div>
         
-        <h2>Why Choose SurveyEarn?</h2>
+        <h2>Why Our Members Love Us</h2>
         <ul class="features">
-            <li><strong>Instant Payments:</strong> Withdraw your earnings anytime with no minimum threshold</li>
-            <li><strong>24/7 Availability:</strong> Surveys available day and night</li>
-            <li><strong>Trusted by Brands:</strong> Partnered with 50+ major companies in Kenya</li>
-            <li><strong>Mobile Friendly:</strong> Complete surveys on any smartphone</li>
-            <li><strong>Referral Program:</strong> Earn 10% of your friends' earnings</li>
+            <li><strong>Daily Survey Opportunities:</strong> Active members receive 5-15 survey invitations daily</li>
+            <li><strong>Varied Earnings:</strong> Earn Ksh 50-500 per survey depending on length and complexity</li>
+            <li><strong>Trusted Platform:</strong> Partnered with 50+ major brands operating in Kenya</li>
+            <li><strong>24/7 Support:</strong> Dedicated Kenyan support team available round the clock</li>
+            <li><strong>No Hidden Fees:</strong> We never charge for membership or withdrawals</li>
         </ul>
         
         <div class="earnings-calculator">
-            <h2>Earnings Potential</h2>
-            <p>See how much you could earn:</p>
+            <h2>Calculate Your Potential Earnings</h2>
             <div class="calculator">
                 <label>Surveys per day: <input type="range" min="1" max="10" value="3" id="surveyRange"> <span id="surveyValue">3</span></label>
                 <label>Days per week: <input type="range" min="1" max="7" value="5" id="dayRange"> <span id="dayValue">5</span></label>
@@ -351,8 +481,8 @@
         </div>
         
         <div class="download-section">
-            <h2>Download Our Mobile App</h2>
-            <p>Get instant survey notifications and earn on the go!</p>
+            <h2>Get Started Today</h2>
+            <p>Download our app for instant survey notifications and exclusive mobile bonuses!</p>
             <a href="#" class="play-store-btn">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
                 <div class="text">
@@ -362,39 +492,39 @@
             </a>
         </div>
         
-        <h2>What Our Members Say</h2>
+        <h2>Success Stories From Our Members</h2>
         <div class="testimonials">
             <div class="testimonial">
-                "I've been using SurveyEarn for 3 months and consistently make Ksh 25,000-30,000 monthly. It's perfect for my student budget."
-                <span class="testimonial-author">- Michael, University of Nairobi</span>
+                "I'm a university student and SurveyEarn pays my rent! I average Ksh 25,000 monthly just doing surveys between classes."
+                <span class="testimonial-author">- Michael, Nairobi</span>
             </div>
             <div class="testimonial">
-                "As a stay-at-home mom, this gives me flexible income. I earn about Ksh 2,500 daily during nap times."
+                "As a single mom, this flexible income has been life-changing. I earn about Ksh 2,500 daily during my free time."
                 <span class="testimonial-author">- Susan, Nakuru</span>
             </div>
             <div class="testimonial">
-                "The instant M-Pesa withdrawals convinced me. I've earned Ksh 42,000 this month alone!"
-                <span class="testimonial-author">- David, Kisumu</span>
+                "The instant M-Pesa withdrawals are real! I've withdrawn over Ksh 80,000 in 3 months with minimal effort."
+                <span class="testimonial-author">- David, Mombasa</span>
             </div>
         </div>
         
         <div class="faq">
             <h2>Frequently Asked Questions</h2>
             <div class="question">
-                <h3>Is SurveyEarn really free to join?</h3>
-                <p>Yes! We never charge membership fees. You earn money by completing surveys, not by paying.</p>
+                <h3>Is this really free to join?</h3>
+                <p>Absolutely! There are no hidden fees or charges. You earn money by completing surveys, not by paying us.</p>
             </div>
             <div class="question">
-                <h3>How quickly will I get paid?</h3>
-                <p>M-Pesa payments are processed instantly. Bank transfers take 1-2 business days.</p>
+                <h3>How quickly will I receive payments?</h3>
+                <p>M-Pesa payments are processed instantly, 24/7. Most members receive their money within 5 minutes of requesting withdrawal.</p>
             </div>
             <div class="question">
-                <h3>Do I need special qualifications?</h3>
-                <p>No! We're looking for all types of Kenyan consumers aged 18+ to share their honest opinions.</p>
+                <h3>What devices can I use?</h3>
+                <p>You can complete surveys on any smartphone, tablet, or computer with internet access.</p>
             </div>
             <div class="question">
-                <h3>How many surveys will I get?</h3>
-                <p>Active members typically receive 5-15 survey invitations daily, depending on their profile.</p>
+                <h3>How do I maximize my earnings?</h3>
+                <p>Complete your profile 100%, check for new surveys daily, and participate in our referral program.</p>
             </div>
         </div>
         
@@ -403,7 +533,7 @@
         </div>
         
         <div class="cta-container">
-            <a href="#" class="cta">START EARNING TODAY →</a>
+            <a href="#" class="cta">START EARNING NOW →</a>
             <p class="small-print">Registration takes less than 2 minutes. No credit card required.</p>
         </div>
         
@@ -412,103 +542,44 @@
             <nav>
                 <a href="#">Privacy Policy</a> | 
                 <a href="#">Terms of Service</a> | 
-                <a href="#">Contact Us</a>
+                <a href="#">Contact Support</a>
             </nav>
         </footer>
     </div>
+
     <!-- Popup Notifications -->
     <div id="popup1" class="popup-notification">
         <div class="popup-close">×</div>
-        <div class="popup-content">Sarah from Nairobi just earned <strong>Kshs 2,150</strong> today!</div>
-        <a href="https://panel.surveyiss.com/" class="popup-link">Start Earning Now</a>
+        <div class="popup-content">Sarah from Nairobi just earned <strong>Ksh 2,150</strong> today!</div>
+        <a href="#" class="popup-link">Start Earning</a>
     </div>
 
     <div id="popup2" class="popup-notification">
         <div class="popup-close">×</div>
-        <div class="popup-content">New users get <strong>Kshs 500 bonus</strong> on first survey!</div>
-        <a href="https://panel.surveyiss.com/" class="popup-link">Claim Your Bonus</a>
+        <div class="popup-content">New users get <strong>Ksh 500 bonus</strong> on first survey!</div>
+        <a href="#" class="popup-link">Claim Bonus</a>
     </div>
 
     <div id="popup3" class="popup-notification">
         <div class="popup-close">×</div>
-        <div class="popup-content"><strong>3 people</strong> in your area are earning now!</div>
-        <a href="https://panel.surveyiss.com/" class="popup-link">Join Them Today</a>
+        <div class="popup-content"><strong>3 people</strong> in your area joined today!</div>
+        <a href="#" class="popup-link">Join Now</a>
     </div>
 
     <div id="popup4" class="popup-notification">
         <div class="popup-close">×</div>
-        <div class="popup-content">Mike from Mombasa cashed out <strong>Kshs 18,500</strong> this week!</div>
-        <a href="https://panel.surveyiss.com/" class="popup-link">Start Earning</a>
+        <div class="popup-content">Mike from Mombasa cashed out <strong>Ksh 18,500</strong>!</div>
+        <a href="#" class="popup-link">See How</a>
     </div>
 
     <div id="popup5" class="popup-notification">
         <div class="popup-close">×</div>
-        <div class="popup-content"><strong>High-paying surveys</strong> available right now!</div>
-        <a href="https://panel.surveyiss.com/" class="popup-link">Get Started</a>
+        <div class="popup-content"><strong>High-paying surveys</strong> available now!</div>
+        <a href="#" class="popup-link">Get Started</a>
     </div>
 
     <script>
-        // Array of popup notifications with different delays
-        const popups = [
-            { id: 'popup1', delay: 2000 },
-            { id: 'popup2', delay: 10000 },
-            { id: 'popup3', delay: 18000 },
-            { id: 'popup4', delay: 26000 },
-            { id: 'popup5', delay: 34000 }
-        ];
-
-        // Function to show and hide a popup
-        function showPopup(popupId) {
-            const element = document.getElementById(popupId);
-            element.classList.add('show');
-            
-            // Auto-hide after 8 seconds
-            setTimeout(() => {
-                element.classList.remove('show');
-            }, 8000);
-        }
-
-        // Show popups with delays
-        popups.forEach(popup => {
-            setTimeout(() => {
-                showPopup(popup.id);
-            }, popup.delay);
-        });
-
-        // Close buttons functionality
-        document.querySelectorAll('.popup-close').forEach(button => {
-            button.addEventListener('click', function() {
-                this.parentElement.classList.remove('show');
-            });
-        });
-
-        // Make notifications reappear every 45 seconds in random order
-        setInterval(() => {
-            // Shuffle the popups array
-            const shuffledPopups = [...popups].sort(() => 0.5 - Math.random());
-            
-            // Show each popup with staggered delays
-            shuffledPopups.forEach((popup, index) => {
-                setTimeout(() => {
-                    // Only show if not already showing
-                    if (!document.getElementById(popup.id).classList.contains('show')) {
-                        showPopup(popup.id);
-                    }
-                }, index * 9000); // Stagger by 9 seconds (1 second gap between popups)
-            });
-        }, 45000); // Repeat cycle every 45 seconds
-
-        // Live notification updates
-        const liveNotification = document.querySelector('.live-notification');
-        const updateCounts = [8, 9, 10, 12, 15, 18, 22, 25, 29, 33];
-        
-        setInterval(() => {
-            const randomCount = updateCounts[Math.floor(Math.random() * updateCounts.length)];
-            liveNotification.textContent = `LIVE: ${randomCount} people signed up in the last 15 minutes`;
-        }, 15000);
-    </script>
-    <script>
-        // Calculator functionality
+        // Earnings Calculator
         const surveyRange = document.getElementById('surveyRange');
         const surveyValue = document.getElementById('surveyValue');
         const dayRange = document.getElementById('dayRange');
@@ -527,7 +598,56 @@
         surveyRange.addEventListener('input', updateCalculator);
         dayRange.addEventListener('input', updateCalculator);
         
-        // (All other JavaScript remains the same)
+        // Popup Notifications
+        const popups = [
+            { id: 'popup1', delay: 2000 },
+            { id: 'popup2', delay: 8000 },
+            { id: 'popup3', delay: 15000 },
+            { id: 'popup4', delay: 22000 },
+            { id: 'popup5', delay: 29000 }
+        ];
+
+        function showPopup(popupId) {
+            const element = document.getElementById(popupId);
+            element.classList.add('show');
+            
+            setTimeout(() => {
+                element.classList.remove('show');
+            }, 8000);
+        }
+
+        popups.forEach(popup => {
+            setTimeout(() => {
+                showPopup(popup.id);
+            }, popup.delay);
+        });
+
+        document.querySelectorAll('.popup-close').forEach(button => {
+            button.addEventListener('click', function() {
+                this.parentElement.classList.remove('show');
+            });
+        });
+
+        setInterval(() => {
+            const shuffledPopups = [...popups].sort(() => 0.5 - Math.random());
+            
+            shuffledPopups.forEach((popup, index) => {
+                setTimeout(() => {
+                    if (!document.getElementById(popup.id).classList.contains('show')) {
+                        showPopup(popup.id);
+                    }
+                }, index * 9000);
+            });
+        }, 45000);
+
+        // Live Notification Updates
+        const liveNotification = document.querySelector('.live-notification');
+        const updateCounts = [8, 9, 10, 12, 15, 18, 22, 25, 29, 33];
+        
+        setInterval(() => {
+            const randomCount = updateCounts[Math.floor(Math.random() * updateCounts.length)];
+            liveNotification.textContent = `LIVE: ${randomCount} people signed up in the last 15 minutes`;
+        }, 15000);
     </script>
 </body>
 </html>
