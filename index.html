@@ -205,39 +205,60 @@
         }
         .popup-notification {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
             background: #e74c3c;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
             z-index: 1000;
-            transform: translateY(100px);
             opacity: 0;
-            transition: all 0.5s ease;
-            max-width: 300px;
-            display: flex;
-            align-items: center;
+            transition: all 0.4s ease;
+            max-width: 90%;
+            width: 350px;
+            text-align: center;
+            pointer-events: none;
         }
         .popup-notification.show {
-            transform: translateY(0);
+            transform: translate(-50%, -50%) scale(1);
             opacity: 1;
+            pointer-events: auto;
         }
         .popup-notification:before {
-            content: "";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            margin-right: 10px;
-            animation: blink 1.5s infinite;
+            content: "🔥";
+            display: block;
+            font-size: 30px;
+            margin-bottom: 10px;
         }
-        .popup-close {
-            margin-left: 10px;
+        .popup-notification .popup-content {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .popup-notification .popup-link {
+            display: inline-block;
+            background: white;
+            color: #e74c3c;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .popup-notification .popup-link:hover {
+            background: #f8f8f8;
+            transform: scale(1.05);
+        }
+        .popup-notification .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
             cursor: pointer;
             font-weight: bold;
+            font-size: 1.2rem;
         }
         
         /* Mobile-specific adjustments */
@@ -265,21 +286,20 @@
                 height: 25px;
             }
             .popup-notification {
-                max-width: 80%;
-                right: 10px;
-                bottom: 10px;
+                width: 85%;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
     <div class="survey-earning">
-        <div class="notification">3</div>
+        <div class="notification">5</div>
         
         <h2>💰 Earn Money Taking Simple Surveys! 💰</h2>
         
         <div class="live-notification">
-            LIVE: 5 people signed up in the last 10 minutes
+            LIVE: 8 people signed up in the last 15 minutes
         </div>
         
         <p>Get paid for sharing your opinions! Complete simple surveys in your spare time and earn between <span class="highlight daily">Kshs 500 to Kshs 3,000 DAILY</span> from the comfort of your home!</p>
@@ -293,7 +313,7 @@
         
         <div class="download-section">
             <div class="download-title">Download Our App Now!</div>
-            <a href="https://panel.surveyiss.com/" class="play-store-btn">
+            <a href="#" class="play-store-btn">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
                 <div class="text">
                     <div class="small">GET IT ON</div>
@@ -320,47 +340,70 @@
         </div>
         
         <div class="live-notification">
-            LIMITED SPOTS AVAILABLE: 3 remaining in Nairobi area
+            LIMITED SPOTS AVAILABLE: Only 2 remaining in your area
         </div>
         
         <div class="cta-container">
-            <a href="https://panel.surveyiss.com/" class="cta">CLAIM YOUR SPOT NOW →</a>
+            <a href="#" class="cta">CLAIM YOUR SPOT NOW →</a>
         </div>
     </div>
 
+    <!-- Popup Notifications -->
     <div id="popup1" class="popup-notification">
-        <div>James from Thika just earned Kshs 1,850!</div>
         <div class="popup-close">×</div>
+        <div class="popup-content">Sarah from Nairobi just earned <strong>Kshs 2,150</strong> today!</div>
+        <a href="#" class="popup-link">Start Earning Now</a>
     </div>
 
     <div id="popup2" class="popup-notification">
-        <div>New high-paying surveys available now!</div>
         <div class="popup-close">×</div>
+        <div class="popup-content">New users get <strong>Kshs 500 bonus</strong> on first survey!</div>
+        <a href="#" class="popup-link">Claim Your Bonus</a>
     </div>
 
     <div id="popup3" class="popup-notification">
-        <div>Only 2 spots left in your area!</div>
         <div class="popup-close">×</div>
+        <div class="popup-content"><strong>3 people</strong> in your area are earning now!</div>
+        <a href="#" class="popup-link">Join Them Today</a>
+    </div>
+
+    <div id="popup4" class="popup-notification">
+        <div class="popup-close">×</div>
+        <div class="popup-content">Mike from Mombasa cashed out <strong>Kshs 18,500</strong> this week!</div>
+        <a href="#" class="popup-link">Start Earning</a>
+    </div>
+
+    <div id="popup5" class="popup-notification">
+        <div class="popup-close">×</div>
+        <div class="popup-content"><strong>High-paying surveys</strong> available right now!</div>
+        <a href="#" class="popup-link">Get Started</a>
     </div>
 
     <script>
-        // Array of popup notifications
+        // Array of popup notifications with different delays
         const popups = [
-            { id: 'popup1', delay: 3000, duration: 5000 },
-            { id: 'popup2', delay: 8000, duration: 5000 },
-            { id: 'popup3', delay: 15000, duration: 5000 }
+            { id: 'popup1', delay: 2000 },
+            { id: 'popup2', delay: 10000 },
+            { id: 'popup3', delay: 18000 },
+            { id: 'popup4', delay: 26000 },
+            { id: 'popup5', delay: 34000 }
         ];
+
+        // Function to show and hide a popup
+        function showPopup(popupId) {
+            const element = document.getElementById(popupId);
+            element.classList.add('show');
+            
+            // Auto-hide after 8 seconds
+            setTimeout(() => {
+                element.classList.remove('show');
+            }, 8000);
+        }
 
         // Show popups with delays
         popups.forEach(popup => {
             setTimeout(() => {
-                const element = document.getElementById(popup.id);
-                element.classList.add('show');
-                
-                // Auto-hide after duration
-                setTimeout(() => {
-                    element.classList.remove('show');
-                }, popup.duration);
+                showPopup(popup.id);
             }, popup.delay);
         });
 
@@ -371,21 +414,30 @@
             });
         });
 
-        // Make notifications reappear every 30 seconds
+        // Make notifications reappear every 45 seconds in random order
         setInterval(() => {
-            popups.forEach(popup => {
-                const element = document.getElementById(popup.id);
-                if (!element.classList.contains('show')) {
-                    setTimeout(() => {
-                        element.classList.add('show');
-                        
-                        setTimeout(() => {
-                            element.classList.remove('show');
-                        }, popup.duration);
-                    }, Math.random() * 5000); // Random delay up to 5 seconds
-                }
+            // Shuffle the popups array
+            const shuffledPopups = [...popups].sort(() => 0.5 - Math.random());
+            
+            // Show each popup with staggered delays
+            shuffledPopups.forEach((popup, index) => {
+                setTimeout(() => {
+                    // Only show if not already showing
+                    if (!document.getElementById(popup.id).classList.contains('show')) {
+                        showPopup(popup.id);
+                    }
+                }, index * 9000); // Stagger by 9 seconds (1 second gap between popups)
             });
-        }, 30000);
+        }, 45000); // Repeat cycle every 45 seconds
+
+        // Live notification updates
+        const liveNotification = document.querySelector('.live-notification');
+        const updateCounts = [8, 9, 10, 12, 15, 18, 22, 25, 29, 33];
+        
+        setInterval(() => {
+            const randomCount = updateCounts[Math.floor(Math.random() * updateCounts.length)];
+            liveNotification.textContent = `LIVE: ${randomCount} people signed up in the last 15 minutes`;
+        }, 15000);
     </script>
 </body>
 </html>
