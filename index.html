@@ -160,6 +160,49 @@
             color: #3498db;
             margin-top: 5px;
         }
+        .play-store-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 15px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .play-store-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+        .play-store-btn img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .play-store-btn .text {
+            text-align: left;
+        }
+        .play-store-btn .small {
+            font-size: 0.7rem;
+            color: #aaa;
+        }
+        .play-store-btn .large {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .download-section {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .download-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f1c40f;
+        }
         
         /* Mobile-specific adjustments */
         @media (max-width: 480px) {
@@ -177,6 +220,13 @@
             }
             body {
                 padding: 10px;
+            }
+            .play-store-btn {
+                padding: 8px 12px;
+            }
+            .play-store-btn img {
+                width: 25px;
+                height: 25px;
             }
         }
     </style>
@@ -200,6 +250,17 @@
         
         <p>With consistent participation, you can accumulate earnings of <span class="highlight monthly">Kshs 15,000 to Kshs 90,000 MONTHLY</span>!</p>
         
+        <div class="download-section">
+            <div class="download-title">Download Our App Now!</div>
+            <a href="#" class="play-store-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                <div class="text">
+                    <div class="small">GET IT ON</div>
+                    <div class="large">Google Play</div>
+                </div>
+            </a>
+        </div>
+        
         <div class="testimonials">
             <div class="testimonial">
                 "I couldn't believe how easy it was! Made Kshs 32,000 in my first month just doing surveys during my commute."
@@ -221,7 +282,9 @@
             LIMITED SPOTS AVAILABLE: 3 remaining in Nairobi area
         </div>
         
-        <a href="#" class="cta">CLAIM YOUR SPOT NOW →</a>
+        <div class="cta-container">
+            <a href="#" class="cta">CLAIM YOUR SPOT NOW →</a>
+        </div>
     </div>
 </body>
 </html>
