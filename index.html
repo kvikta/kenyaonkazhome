@@ -10,50 +10,65 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e0e0e0 100%);
         }
         .hero {
-            background-color: #28a745;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
         }
-        .download-btn {
-            background-color: #fff;
-            color: #28a745;
-            padding: 10px 20px;
+        .get-started-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
             font-size: 1.1rem;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s;
+            margin-right: 15px;
+            transition: background-color 0.3s, transform 0.2s;
         }
-        .download-btn:hover {
-            background-color: #e0e0e0;
-            color: #28a745;
+        .get-started-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .google-play-btn {
+            transition: transform 0.2s;
+        }
+        .google-play-btn:hover {
+            transform: scale(1.05);
         }
         .section {
-            padding: 40px 0;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8ff 100%);
         }
         .card {
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .ticker {
-            background-color: #343a40;
+            background: linear-gradient(90deg, #343a40 0%, #495057 100%);
             color: white;
             overflow: hidden;
             white-space: nowrap;
-            padding: 10px 0;
+            padding: 12px 0;
         }
         .ticker-wrapper {
             overflow: hidden;
@@ -71,24 +86,34 @@
             display: inline-block;
             padding-right: 2em;
             font-size: 1rem;
+            color: #ffd700; /* Gold text for vibrancy */
         }
         .faq .accordion-button {
             background-color: #f8f9fa;
             color: #343a40;
+            font-weight: bold;
         }
         .faq .accordion-button:focus {
             box-shadow: none;
         }
+        .faq .accordion-item {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             .hero p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
-            .download-btn {
+            .get-started-btn {
                 font-size: 1rem;
-                padding: 8px 16px;
+                padding: 10px 20px;
+                margin-bottom: 15px;
+            }
+            .google-play-btn img {
+                width: 150px;
             }
         }
     </style>
@@ -99,7 +124,12 @@
         <div class="container">
             <h1>Earn Money by Sharing Your Opinions</h1>
             <p>Join thousands of Kenyans earning up to Ksh 3,000 daily from home</p>
-            <a href="https://play.google.com/store/apps/details?id=com.earn.surveys.surveyiss" class="download-btn" target="_blank">Download Now</a>
+            <div>
+                <a href="https://panel.surveyiss.com/home" class="get-started-btn" target="_blank">Get Started</a>
+                <a href="https://play.google.com/store/apps/details?id=com.earn.surveys.surveyiss" class="google-play-btn" target="_blank">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="width: 180px;">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -137,7 +167,7 @@
     </section>
 
     <!-- Earnings Potential Section -->
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
             <h2 class="text-center mb-4">Earnings Potential</h2>
             <div class="row">
@@ -235,9 +265,9 @@
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Custom JavaScript (if needed, currently none required as ticker uses CSS animation) -->
+    <!-- Custom JavaScript -->
     <script>
-        // Placeholder for any future JavaScript functionality
+        // Placeholder for future JavaScript functionality
     </script>
 </body>
 </html>
