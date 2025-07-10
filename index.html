@@ -56,12 +56,30 @@
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            background-color: #fff;
+            background: linear-gradient(135deg, #e6f4ea 0%, #f1f8ff 100%);
             border-radius: 10px;
             transition: transform 0.3s;
         }
         .card:hover {
             transform: translateY(-5px);
+        }
+        .review-card {
+            background: linear-gradient(135deg, #e6f4ea 0%, #f1f8ff 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .review-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .review-card .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
         .ticker {
             background: linear-gradient(90deg, #343a40 0%, #495057 100%);
@@ -86,7 +104,7 @@
             display: inline-block;
             padding-right: 2em;
             font-size: 1rem;
-            color: #ffd700; /* Gold text for vibrancy */
+            color: #ffd700;
         }
         .faq .accordion-button {
             background-color: #f8f9fa;
@@ -99,6 +117,7 @@
         .faq .accordion-item {
             border-radius: 10px;
             margin-bottom: 10px;
+            background: linear-gradient(135deg, #e6f4ea 0%, #f1f8ff 100%);
         }
         @media (max-width: 768px) {
             .hero h1 {
@@ -114,6 +133,10 @@
             }
             .google-play-btn img {
                 width: 150px;
+            }
+            .review-card img {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
@@ -193,6 +216,39 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" alt="Jane">
+                        <h5>Jane from Nairobi</h5>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Surveyiss is amazing! I earn Ksh 2,000 weekly from short surveys, and M-Pesa payouts are instant!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" alt="Peter">
+                        <h5>Peter from Mombasa</h5>
+                        <div class="stars">⭐⭐⭐⭐</div>
+                        <p>"Easy to use and great rewards. I made Ksh 3,500 last month just in my free time!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" alt="Grace">
+                        <h5>Grace from Kisumu</h5>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The best survey app in Kenya! I've earned Ksh 4,000 this month, highly recommend!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section faq">
         <div class="container">
@@ -228,7 +284,7 @@
                             Are there any hidden fees?
                         </button>
                     </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                    <div id="collapse3"lapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                             No, Surveyiss has no hidden fees. You keep what you earn.
                         </div>
