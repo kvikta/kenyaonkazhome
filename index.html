@@ -70,7 +70,7 @@
         .tagline {
             font-size: 1.2rem;
             opacity: 0.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             max-width: 600px;
             line-height: 1.6;
             color: #f8f9fa;
@@ -230,6 +230,23 @@
                 height: 60px;
             }
         }
+        .arrow-down {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #f8f9fa;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -239,6 +256,7 @@
             <img src="https://play-lh.googleusercontent.com/-b8fPXvOU39WU1gQJk0J48I7ScQaR9Zn_gxYFLKYF9D86mQ8Oc8c7k3OvKI04KwEI7jp=w480-h960-rw" class="app-logo" alt="Surveyiss Logo">
             <h1 class="welcome-text">Earn Money by Sharing Your Opinions</h1>
             <p class="tagline">Join the Surveyiss panel<br>and earn up to Ksh 23,250 /month?<br>It is possible!<br>How much would you like to earn?</p>
+            <div class="arrow-down">↓</div>
             <div class="cta-buttons">
                 <a href="https://panel.surveyiss.com/home" class="cta-button">up to Ksh 6,200</a>
                 <a href="https://panel.surveyiss.com/home" class="cta-button">up to Ksh 23,250</a>
