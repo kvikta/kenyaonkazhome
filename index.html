@@ -20,6 +20,8 @@
     <link rel="apple-touch-icon" type="image/png" href="/favicon-180x180.png" sizes="180x180">
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17339230896">
@@ -130,6 +132,30 @@
             padding: 50px 0;
             background: rgba(255, 255, 255, 0.1);
         }
+        .stats-section {
+            background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
+            color: white;
+        }
+        .stats-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s;
+            color: white;
+        }
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        .stats-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
         .card {
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -229,6 +255,12 @@
                 width: 60px;
                 height: 60px;
             }
+            .stats-icon {
+                font-size: 2rem;
+            }
+            .stats-number {
+                font-size: 2rem;
+            }
         }
         .arrow-down {
             font-size: 2rem;
@@ -258,9 +290,9 @@
             <p class="tagline">Join the Surveyiss panel<br>and earn up to Ksh 23,250 /month?<br>It is possible!<br>How much would you like to earn?</p>
             <div class="arrow-down">↓</div>
             <div class="cta-buttons">
-                <a href="https://panel.surveyiss.com/home" class="cta-button">up to Ksh 6,200</a>
-                <a href="https://panel.surveyiss.com/home" class="cta-button">up to Ksh 23,250</a>
-                <a href="https://panel.surveyiss.com/home" class="cta-button">up to Ksh 23,250 and More</a>
+                <a href="https://panel.surveyiss.com/home" class="cta-button">Up to Ksh 6,200</a>
+                <a href="https://panel.surveyiss.com/home" class="cta-button">Up to Ksh 23,250</a>
+                <a href="https://panel.surveyiss.com/home" class="cta-button">Ksh 23,250 and More</a>
 <!--                 <a href="https://play.google.com/store/apps/details?id=com.earn.surveys.surveyiss" class="google-play-btn">
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="width: 180px;">
                 </a> -->
@@ -294,20 +326,22 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section">
+    <section class="section stats-section">
         <div class="container">
             <h2 class="text-center mb-4">Our Stats</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card text-center p-3">
+                    <div class="stats-card text-center p-4">
+                        <i class="bi bi-clipboard-data stats-icon"></i>
                         <h5>Surveys Launched</h5>
-                        <p>5,000</p>
+                        <p class="stats-number">5,000</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card text-center p-3">
+                    <div class="stats-card text-center p-4">
+                        <i class="bi bi-people stats-icon"></i>
                         <h5>Registered Users</h5>
-                        <p>100,000</p>
+                        <p class="stats-number">100,000</p>
                     </div>
                 </div>
             </div>
